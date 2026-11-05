@@ -1,83 +1,102 @@
-# QueueLess – Smart Queue Management System
+QueueLess – Smart Queue Management System
 
-A beginner-friendly full-stack starter project for digital token generation and queue tracking.
+About the Project
 
-## Tech stack
-- Frontend: React + Vite
-- Backend: Node.js + Express
-- Database: MongoDB + Mongoose
+QueueLess is a smart digital queue management system designed to reduce waiting time and make queue management easier. Users can generate digital tokens, track their queue status, and access services without standing in long physical queues.
 
-## Features included
-- View available services (Hospital, Bank, College Office)
-- Generate a digital token for a selected service
-- View token number, queue position, and estimated waiting time
-- Admin screen to view tokens and call the next waiting token
-- Update token status to `serving` or `completed`
+Features
 
-> This is an educational MVP. Before real-world deployment, add proper user/admin authentication, input validation, rate limiting, audit logs, and privacy/security review.
+- Digital Token Generation
+- Real-Time Queue Tracking
+- Multiple Service Selection
+- Admin Queue Management
+- Token Status Updates
+- MongoDB Database Integration
 
-## Requirements
-Install Node.js (LTS) and MongoDB Community Server, or use a MongoDB Atlas connection string.
+Technologies Used
 
-## 1. Configure backend
-Open a terminal in `backend`:
+Frontend
 
-```bash
-npm install
-```
+- React.js
+- HTML5
+- CSS3
+- JavaScript
+- Vite
 
-Copy `.env.example` to `.env` and set `MONGODB_URI`.
+Backend
 
-Start backend:
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
 
-```bash
-npm run dev
-```
+Project Structure
 
-Backend runs at `http://localhost:5000`.
-
-## 2. Configure frontend
-Open another terminal in `frontend`:
-
-```bash
-npm install
-npm run dev
-```
-
-Open the local URL shown by Vite (usually `http://localhost:5173`).
-
-## 3. Use the app
-1. Select a service and enter your name.
-2. Click **Generate token**.
-3. Open the **Admin** tab to view the queue.
-4. Click **Call next** to move the next waiting token to serving.
-5. Click **Complete** when service is finished.
-
-## Project structure
-
-```text
 QueueLess/
-  backend/
-    src/
-      models/Token.js
-      routes/queue.js
-      server.js
-    .env.example
-    package.json
-  frontend/
-    src/
-      App.jsx
-      main.jsx
-      style.css
-    index.html
-    package.json
-    vite.config.js
-```
+│
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── index.html
+│
+├── backend/
+│   ├── src/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── server.js
+│   ├── package.json
+│   └── .env.example
+│
+└── README.md
 
-## Useful next improvements
-- JWT login with separate user and admin roles
-- Live updates with Socket.IO
-- QR code on each token
-- Appointment booking and time slots
-- Daily analytics dashboard
-- Deploy frontend and backend
+Installation and Setup
+
+1. Clone the Repository
+
+git clone https://github.com/deekshithamaddukuru/QueueLess.git
+cd QueueLess
+
+2. Configure Backend
+
+cd backend
+npm install
+
+Create a ".env" file inside the backend folder.
+
+Add the following configuration:
+
+PORT=5000
+MONGODB_URI=mongodb://127.0.0.1:27017/queueless
+
+Start the backend server:
+
+npm run dev
+
+3. Configure Frontend
+
+Open a new terminal:
+
+cd frontend
+npm install
+npm run dev
+
+Open the local URL displayed in the terminal.
+
+Database
+
+MongoDB is used to store token details and queue-related information.
+
+Future Enhancements
+
+- User Authentication
+- SMS Notifications
+- Estimated Waiting Time
+- Multiple Service Center Support
+
+Author
+
+Deekshitha
+
+License
+
+This project is developed for educational purposes.
