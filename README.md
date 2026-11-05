@@ -1,102 +1,113 @@
-QueueLess – Smart Queue Management System
+# QueueLess | Smart Queue Management System
 
-About the Project
+A digital queue management platform that simplifies token generation, queue tracking, and service management.
 
-QueueLess is a smart digital queue management system designed to reduce waiting time and make queue management easier. Users can generate digital tokens, track their queue status, and access services without standing in long physical queues.
+## Overview
 
-Features
+QueueLess is a web-based application designed to reduce waiting time and improve the queue management experience. Users can generate digital tokens and track their queue status, while administrators can manage tokens efficiently.
 
-- Digital Token Generation
-- Real-Time Queue Tracking
-- Multiple Service Selection
-- Admin Queue Management
-- Token Status Updates
-- MongoDB Database Integration
+## Key Features
 
-Technologies Used
+* Digital Token Generation
+* Real-Time Queue Tracking
+* Multiple Service Selection
+* Admin Queue Management
+* Token Status Updates
+* MongoDB Database Integration
 
-Frontend
+## Tech Stack
 
-- React.js
-- HTML5
-- CSS3
-- JavaScript
-- Vite
+| Frontend   | Backend    | Database |
+| ---------- | ---------- | -------- |
+| React.js   | Node.js    | MongoDB  |
+| HTML5      | Express.js | Mongoose |
+| CSS3       | REST API   |          |
+| JavaScript |            |          |
 
-Backend
+## Project Structure
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-
-Project Structure
-
+```text
 QueueLess/
-│
 ├── frontend/
 │   ├── src/
-│   ├── package.json
-│   └── index.html
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── style.css
+│   ├── index.html
+│   └── package.json
 │
 ├── backend/
 │   ├── src/
 │   │   ├── models/
+│   │   │   └── Token.js
 │   │   ├── routes/
+│   │   │   └── queue.js
 │   │   └── server.js
-│   ├── package.json
-│   └── .env.example
+│   └── package.json
 │
+├── .gitignore
 └── README.md
+```
 
-Installation and Setup
+## Installation & Setup
 
-1. Clone the Repository
+**1. Clone the repository**
 
+```bash
 git clone https://github.com/deekshithamaddukuru/QueueLess.git
 cd QueueLess
+```
 
-2. Configure Backend
+**2. Backend Setup**
 
+```bash
 cd backend
 npm install
+```
 
-Create a ".env" file inside the backend folder.
+Create a `.env` file inside the backend folder:
 
-Add the following configuration:
-
+```env
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/queueless
+```
 
-Start the backend server:
+Start the backend:
 
+```bash
 npm run dev
+```
 
-3. Configure Frontend
+**3. Frontend Setup**
 
 Open a new terminal:
 
+```bash
 cd frontend
 npm install
 npm run dev
+```
 
 Open the local URL displayed in the terminal.
 
-Database
+## API Endpoints
 
-MongoDB is used to store token details and queue-related information.
+| Method | Endpoint            | Purpose         |
+| ------ | ------------------- | --------------- |
+| GET    | `/api/services`     | View services   |
+| POST   | `/api/tokens`       | Generate token  |
+| GET    | `/api/tokens/:id`   | Track token     |
+| GET    | `/api/admin/tokens` | View all tokens |
 
-Future Enhancements
+## Future Enhancements
 
-- User Authentication
-- SMS Notifications
-- Estimated Waiting Time
-- Multiple Service Center Support
+* User Authentication
+* SMS Notifications
+* Waiting Time Estimation
+* Queue Analytics
 
-Author
+## Author
 
-Deekshitha
+**Deekshitha**
 
-License
-
-This project is developed for educational purposes.
+B.Tech – Computer Science
